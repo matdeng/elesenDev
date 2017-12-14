@@ -5,13 +5,75 @@
     "keywords": ["framework", "laravel", "orchestra-platform", "orchestral"],
     "license": "MIT",
     "type": "project",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "http://coders.3fresources.com/threef/entree.git"
+        },
+        {
+            "type": "git",
+            "url": "http://coders.3fresources.com/ppj-elesen/alpha-red.git"
+        },
+        {
+            "type": "git",
+            "url": "http://coders.3fresources.com/ppj-elesen/application.git"
+        },
+        {
+            "type": "git",
+            "url": "http://coders.3fresources.com/ppj-elesen/model.git"
+        },
+        {
+            "type": "git",
+            "url": "http://coders.3fresources.com/ppj-elesen/access.git"
+        },
+        {
+            "type": "git",
+            "url": "http://coders.3fresources.com/ppj-elesen/premise.git"
+        },
+        {
+            "type": "git",
+            "url": "http://coders.3fresources.com/ppj-elesen/payment.git"
+        },
+        {
+            "type": "git",
+            "url": "http://coders.3fresources.com/ppj-elesen/business.git"
+        },
+        {
+            "type": "git",
+            "url": "http://coders.3fresources.com/ppj-elesen/document.git"
+        },
+        {
+            "type": "git",
+            "url": "http://coders.3fresources.com/ppj-elesen/enforcement.git"
+        },
+        {
+            "type": "git",
+            "url": "http://coders.3fresources.com/ppj-elesen/meeting.git"
+        },
+        {
+            "type": "git",
+            "url": "http://coders.3fresources.com/threef/flows.git"
+        }
+    ],
     "require": {
         "php": ">=5.6.4",
         "laravel/tinker": "~1.0",
         "orchestra/avatar": "~3.4.0",
         "orchestra/control": "~3.4.0",
         "orchestra/foundation": "~3.4.3",
-        "orchestra/installer": "~3.4.0"
+        "orchestra/installer": "~3.4.0",
+        "threef/entree": "1.0.*",
+        "elesen/model": "dev-master",
+        "elesen/access": "dev-master",
+        "elesen/premise": "dev-master",
+        "elesen/payment": "dev-master",
+        "elesen/application": "dev-master",
+        "elesen/business": "dev-master",
+        "elesen/document": "dev-master",
+        "elesen/enforcement": "dev-master",
+        "elesen/meeting": "dev-master",
+        "joesama/flower": "1.0.*",
+        "elesen/red": "1.0.*"
     },
     "require-dev": {
         "orchestra/testing": "~3.4.1",
@@ -49,7 +111,9 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,        
+        "secure-http": false,
+        "http-basic" : {"coders.3fresources.com": {"username": "root", "password": "3frsb638525h"}}
     },
     "prefer-stable": true,
     "minimum-stability": "dev"
