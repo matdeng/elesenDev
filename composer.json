@@ -52,6 +52,14 @@
         },
         {
             "type": "git",
+            "url": "http://coders.3fresources.com/ppj-elesen/report.git"
+        },
+        {
+            "type": "git",
+            "url": "http://coders.3fresources.com/ppj-elesen/eis.git"
+        },
+        {
+            "type": "git",
             "url": "http://coders.3fresources.com/threef/flows.git"
         }
     ],
@@ -72,6 +80,8 @@
         "elesen/document": "dev-master",
         "elesen/enforcement": "dev-master",
         "elesen/meeting": "dev-master",
+        "elesen/report": "dev-master",
+        "elesen/eis": "dev-master",
         "joesama/flower": "1.0.*",
         "elesen/red": "1.0.*"
     },
