@@ -53,6 +53,20 @@ return [
             'engine' => null,
         ],
 
+        env('SAP_COMPOUND') => [
+            'driver' => 'mysql',
+            'host' => env('SAP_HOST',env('DB_HOST', 'localhost')),
+            'database' => env('SAP_COMPOUND',env('DB_DATABASE', 'forge')),
+            'username' => env('SAP_USERNAME',env('DB_USERNAME', 'forge')),
+            'password' => env('SAP_PASSWORD',env('DB_PASSWORD', '')),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', 'localhost'),

@@ -13,7 +13,9 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        \Elesen\Application\Commands\UpdateExpiredLicense::class,
+        \Elesen\Application\Commands\ExpiredEmailNotification::class,
+
     ];
 
     /**
@@ -25,7 +27,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('license:update-expired')->daily();
+        $schedule->command('license:email-expired')->daily();
+
     }
 
     /**
