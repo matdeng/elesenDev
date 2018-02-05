@@ -53,10 +53,10 @@ return [
             'engine' => null,
         ],
 
-        env('SAP_COMPOUND') => [
+        env('SAP_DATABASE') => [
             'driver' => 'mysql',
             'host' => env('SAP_HOST',env('DB_HOST', 'localhost')),
-            'database' => env('SAP_COMPOUND',env('DB_DATABASE', 'forge')),
+            'database' => env('SAP_DATABASE',env('DB_DATABASE', 'forge')),
             'username' => env('SAP_USERNAME',env('DB_USERNAME', 'forge')),
             'password' => env('SAP_PASSWORD',env('DB_PASSWORD', '')),
             'unix_socket' => env('DB_SOCKET', ''),
