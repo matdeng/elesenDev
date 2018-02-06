@@ -53,7 +53,8 @@ return [
             'engine' => null,
         ],
 
-        'sap' => [
+
+        'integration' => [
             'driver' => 'mysql',
             'host' => env('SAP_HOST',env('DB_HOST', 'localhost')),
             'database' => env('SAP_DATABASE',env('DB_DATABASE', 'forge')),
@@ -62,11 +63,26 @@ return [
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
+            'port' => env('SAP_PORT','3306'),
             'prefix' => '',
             'strict' => true,
             'engine' => null,
         ],
 
+        'migration' => [
+            'driver' => 'mysql',
+            'host' => env('MIG_HOST',env('DB_HOST', 'localhost')),
+            'database' => env('MIG_DATABASE',env('DB_DATABASE', 'forge')),
+            'username' => env('MIG_USERNAME',env('DB_USERNAME', 'forge')),
+            'password' => env('MIG_PASSWORD',env('DB_PASSWORD', '')),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'port' => env('MIG_PORT','3306'),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', 'localhost'),
