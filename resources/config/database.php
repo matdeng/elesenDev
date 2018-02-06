@@ -53,7 +53,7 @@ return [
             'engine' => null,
         ],
 
-        env('SAP_DATABASE') => [
+        'sap' => [
             'driver' => 'mysql',
             'host' => env('SAP_HOST',env('DB_HOST', 'localhost')),
             'database' => env('SAP_DATABASE',env('DB_DATABASE', 'forge')),
