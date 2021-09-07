@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Exception;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Auth;
 
 class Handler extends ExceptionHandler
 {
@@ -46,6 +47,23 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+	//https://stackoverflow.com/questions/31210618/laravel-csrf-token-mismatch-exception-after-session-timeout	
+	if($exception instanceof \Illuminate\Session\TokenMismatchException){
+                // token mismatch is a security concern, ensure logout.
+                Auth::logout();
+
+                // Tell the user what happened.
+                //session()->flash('alert-warning','Your session expired. Please login to continue.');
+
+                // Go to login.
+                //return redirect()->route('/login');
+                return redirect('login');
+                //turn redirect_with_message(
+                //ndles('login'),
+                //,
+                //uccess');
+                }
+
         return parent::render($request, $exception);
     }
 

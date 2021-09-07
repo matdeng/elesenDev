@@ -71,7 +71,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'authen',
-            'model' => App\User::class,
+            'model' => Threef\Entree\Database\Model\User::class,
         ],
 
         // 'users' => [
